@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Tile Photo</title>
+</head>
+<body>
+    <div class="frame" id="frame">
+        <div class="tiles" id="tiles"></div>
+    </div>
+
+    <div class="form">
+        <form id="img-form" onsubmit="return saveImg()">
+            <input type="text" class="img-url" id="img-url">
+            <input type="submit" class="img-save">
+        </form>
+    </div>
+    <div class="saved" id="saved"></div>
+    <script src="app.js"></script>
+</body>
+</html>
