@@ -8,16 +8,14 @@
     <title>Tile Photo</title>
 </head>
 <body>
-    <div class="frame" id="frame">
-        <div class="tiles" id="tiles"></div>
-    </div>
 
-    <div class="form">
-        <form id="img-form" onsubmit="return saveImg()">
-            <input type="text" class="img-url" id="img-url">
-            <input type="submit" class="img-save">
-        </form>
-    </div>
+    <form id="img-form" onsubmit="return saveImg()">
+        <input type="text" class="img-input" id="img-input" placeholder="이미지 URL">
+        <input type="submit" class="img-save" value="save">
+        <input type="button" class="img-start" onclick="startTile()" value="start">
+        <input type="button" class="img-reset" onclick="resetImg()" value="reset">
+    </form>
+
     <div class="saved" id="saved"></div>
     <script src="app.js"></script>
 </body>
