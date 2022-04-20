@@ -1,13 +1,18 @@
 function setImg() {
     document.getElementById('saved').innerHTML = '';
     for (let index = 0; index < localStorage.length; index++) {
-        var myImage = new Image(100);
+        var myImage = new Image(150);
         myImage.src = localStorage.getItem(String(index));
         document.getElementById('saved').appendChild(myImage);
     }
 }
 
 function saveImg() {
+    
+    if (localStorage.length == 10) {
+        alert('10개 까지만 가능해!');
+        return false;
+    }
     var imgInput = document.getElementById('img-input');
     var imgUrl = imgInput.value;
     localStorage.setItem(localStorage.length, imgUrl);
@@ -28,8 +33,10 @@ function saveImg() {
 }
 
 function resetImg() {
-    localStorage.clear();
-    setImg();
+    if (confirm('다 지울거야?')) {
+        localStorage.clear();
+        setImg();
+    }
 }
 
 function startTile() {

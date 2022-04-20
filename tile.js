@@ -9,7 +9,7 @@ function startTile(url) {
         var frame = document.getElementById('frame');
         frame.innerHTML = '';
 
-        var tileSize = 100;
+        var tileSize = 80;
         var gridTemplateColumns = '';
         frame.insertAdjacentHTML('beforeend', '<div class="tiles" id="tiles"></div>');
         var tiles = document.getElementById('tiles');
@@ -26,7 +26,7 @@ function startTile(url) {
         var totalTile = Math.round(this.width / tileSize) * Math.round(this.height / tileSize)
         for (let index = 0; index < totalTile; index++) {
             var number = index + 1;
-            var tile = '<div class="tile" onclick="viewPhoto(this)"><div class="numbers">' + number + '</div></div>'
+            var tile = '<div class="tile yellow" onclick="viewPhoto(this)"><div class="numbers">' + number + '</div></div>'
             tiles.insertAdjacentHTML('beforeend', tile);
         }
         frame.appendChild(myImage);
@@ -42,9 +42,23 @@ function viewPhoto(div) {
     }
 }
 
-function nextTile() {
-    key++
-    startTile(localStorage.getItem(String(key)));
+function goHome() {
+    location.href = 'index.html'
 }
+
+function nextTile(btn) {
+    document.getElementById('tiles').style.display = 'grid';
+    key++
+    if (localStorage.length -1 == key) {
+        btn.disabled = true;
+    }
+    startTile(localStorage.getItem(String(key)));   
+
+}
+
+function clearTile() {
+    document.getElementById('tiles').style.display = 'none';
+}
+
 var key = 0;
 startTile(localStorage.getItem(String(key)));

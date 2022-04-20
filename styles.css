@@ -1,28 +1,61 @@
 body {
-    background-color: black;
+    background-color: #333C83;
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 0px;
 }
+
+h1 {
+    color: #EAEA7F;
+}
+
+.red {
+    background-color: #F24A72;
+}
+
+.orange {
+    background-color: #FDAF75;
+}
+
+.yellow {
+    background-color: #EAEA7F;
+}
+
+.btn {
+    color: #000;
+    border-style: none;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 14px 28px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+.btn:disabled {
+    background-color: #b1b1b1;
+}
+
 .frame {
     margin-top: 1%;
+    margin-bottom: 1%;
+    
 }
 
 .tiles {
     position: absolute;
     display: grid;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
 }
 
 .tile {
-    background-color: aquamarine;
     box-sizing: border-box;
     display: flex;
     justify-content: center;
     align-items: center;
     transition: 0.4s;
     cursor: pointer;
-
 }
 
 .tile:hover{
@@ -35,72 +68,25 @@ body {
 
 .saved img{
     margin: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .saved {
-    margin-top: 1%;
-
+    margin-top: 3%;
     height: 120px;
-    
 }
-
 
 form {
-    margin-top: 2%;
-    width: 50%;
-    display: grid;
-    grid-template-columns: auto 10%  10%  10%;
+    margin-top: 3%;
+    width: 65%;
 
 }
 
-.img-input {
-    padding: 2px;
-    height: 50px;
+.input {
+    width: 63%;
+    padding: 2px 10px;
+    height: 39px;
     border-style: none;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
 }
-
-.img-save {
-    color: #000;
-    background-color: aquamarine;
-    border-style: none;
-    cursor: pointer;
-    font-weight: bold;
-}
-
-.img-start {
-    color: #000;
-    background-color: aqua;
-    border-style: none;
-    cursor: pointer;
-    font-weight: bold;
-}
-
-.img-reset {
-    color: #000;
-    background-color: skyblue;
-    border-style: none;
-    cursor: pointer;
-    font-weight: bold;
-}
-
-.tile-clear {
-    color: #000;
-    height: 80px;
-    width: 250px;
-    background-color: skyblue;
-    border-style: none;
-    cursor: pointer;
-    font-weight: bold;
-}
-
-.tile-next {
-    color: #000;
-    height: 80px;
-    width: 250px;
-
-    background-color: skyblue;
-    border-style: none;
-    cursor: pointer;
-    font-weight: bold;
-}
-
