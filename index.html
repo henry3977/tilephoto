@@ -9,8 +9,24 @@
 </head>
 <body>
     <div class="main">
+        <div class="text">
+            <h1>Tile Photo</h1>
+            <p>
+                <ol>
+                    <li>
+                        삽화 이미지 링크를 입력하고 <strong class="text-red">Save</strong> 하세요. (최대 10장까지 가능)
+                    </li>
+                    <li>
+                        <strong class="text-yellow">Start</strong> 버튼을 눌러요.
+                    </li>
+                    <li>
+                        <strong class="text-red">Save</strong> 된 삽화는 브라우저에 저장 됩니다.
+                    </li>
+                </ol>
+            </p>
+        </div>
         <form id="img-form" onsubmit="return saveImg()">
-            <input type="text" class="input" id="img-input" placeholder="이미지 URL">
+            <input type="text" class="input" id="img-input" placeholder="삽화 이미지 링크">
             <div class="form-btn">
                 <input type="submit" class="btn red" value="Save">
                 <input type="button" class="btn yellow ml" onclick="startTile()" value="Start">
@@ -18,9 +34,11 @@
             </div>
 
         </form>
+
     </div>
 
     <div class="saved" id="saved"></div>
+
     <script src="app.js"></script>
 </body>
 </html>

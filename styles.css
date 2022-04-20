@@ -10,7 +10,11 @@ body {
 }
 
 h1 {
-    color: #EAEA7F;
+    color: white;
+}
+
+h3 {
+    color: white;
 }
 
 .red {
@@ -23,6 +27,17 @@ h1 {
 
 .yellow {
     background-color: #EAEA7F;
+}
+.text-red {
+    color: #F24A72;
+}
+
+.text-orange {
+    color: #FDAF75;
+}
+
+.text-yellow {
+    color: #EAEA7F;
 }
 
 .btn {
@@ -79,10 +94,19 @@ h1 {
 }
 
 form {
-    margin-top: 3%;
+    margin-top: 1%;
     width: 50%;
 }
 
+li {
+    color: white;
+    font-size: large;
+    font-weight: bold;
+}
+.text {
+    margin-top: 1%;
+    width: 50%;
+}
 .input {
     width: 100%;
     padding: 0px;
