@@ -46,12 +46,10 @@ function goHome() {
     location.href = 'index.html'
 }
 
-function nextTile(btn) {
+function nextTile() {
     document.getElementById('tiles').style.display = 'grid';
     key++
-    if (localStorage.length -1 == key) {
-        btn.disabled = true;
-    }
+    disNext()
     startTile(localStorage.getItem(String(key)));   
 
 }
@@ -60,5 +58,12 @@ function clearTile() {
     document.getElementById('tiles').style.display = 'none';
 }
 
+function disNext() {
+    if (localStorage.length -1 == key) {
+        document.getElementById('next-btn').disabled = true;
+    }
+}
+
 var key = 0;
 startTile(localStorage.getItem(String(key)));
+disNext();
