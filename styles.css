@@ -1,9 +1,12 @@
 body {
     background-color: #333C83;
+    margin: 0px;
+}
+
+.main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 0px;
 }
 
 h1 {
@@ -38,7 +41,6 @@ h1 {
 
 .frame {
     margin-top: 1%;
-    margin-bottom: 1%;
     
 }
 
@@ -78,15 +80,30 @@ h1 {
 
 form {
     margin-top: 3%;
-    width: 65%;
-
+    width: 50%;
 }
 
 .input {
-    width: 63%;
-    padding: 2px 10px;
+    width: 100%;
+    padding: 0px;
     height: 39px;
     border-style: none;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
 
+.form-btn {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.tile-btn {
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.ml {
+    margin-left: 5px;
 }

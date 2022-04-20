@@ -8,12 +8,18 @@
     <title>Tile Photo</title>
 </head>
 <body>
-    <form id="img-form" onsubmit="return saveImg()">
-        <input type="text" class="input" id="img-input" placeholder="이미지 URL">
-        <input type="submit" class="btn red" value="Save">
-        <input type="button" class="btn yellow" onclick="startTile()" value="Start">
-        <input type="button" class="btn orange" onclick="resetImg()" value="Reset">
-    </form>
+    <div class="main">
+        <form id="img-form" onsubmit="return saveImg()">
+            <input type="text" class="input" id="img-input" placeholder="이미지 URL">
+            <div class="form-btn">
+                <input type="submit" class="btn red" value="Save">
+                <input type="button" class="btn yellow ml" onclick="startTile()" value="Start">
+                <input type="button" class="btn orange ml" onclick="resetImg()" value="Reset">
+            </div>
+
+        </form>
+    </div>
+
     <div class="saved" id="saved"></div>
     <script src="app.js"></script>
 </body>

@@ -8,14 +8,25 @@
     <title>Tile Photo</title>
 </head>
 <body>
-    <div class="frame" id="frame">
-        <div class="tiles" id="tiles"></div>
+    <div class="main">
+
+        <div class="frame" id="frame">
+            <div class="tiles" id="tiles"></div>
+        </div>
+
+        <div class="tile-btn">
+      
+            <button class="btn red" onclick="goHome()">home</button>
+            <button class="btn yellow ml" onclick="clearTile()">clear</button>
+            <button class="btn orange ml" onclick="nextTile(this)">next</button>
+
+        </div>
+
+
+
+
     </div>
-    <div>
-        <button class="btn red" onclick="goHome()()">home</button>
-        <button class="btn yellow" onclick="clearTile()">clear</button>
-        <button class="btn orange" onclick="nextTile(this)">next</button>
-    </div>
+    
     <script src="tile.js"></script>
 </body>
 </html>
